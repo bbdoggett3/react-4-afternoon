@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+// import ClassList from '../ClassList/ClassList';
 
 export default class Student extends Component {
+
   constructor() {
     super()
 
@@ -27,6 +29,7 @@ export default class Student extends Component {
         <h1>{studentInfo.first_name} {studentInfo.last_name}</h1>
         <h3>{studentInfo.grade}</h3>
         <h3>{studentInfo.email}</h3>
+        <button className='back-btn' onClick={() => this.props.history.goBack()}>Back</button>
       </div>
     )
   }
